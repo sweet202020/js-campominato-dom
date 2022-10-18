@@ -42,14 +42,22 @@ randomBombsNumber(1, 100)
             -con il this aggiungo la classe */
             
             squareEl.addEventListener('click', function active(){
-                squareEl.classList.toggle('active')
+                squareEl.classList.add('active')
                 console.log(squareEl.innerText)
                 if (bombsArray.includes(Number(squareEl.innerText))){
-                    console.log('ciao')
+                    /* console.log('ciao') */
+                    squareEl.classList.remove('active')
+                    squareEl.classList.add('lose')
+                    //seleziono l'h1 dalla dom
+                    //rimuovo la classe d-none
+                    const lose = document.querySelector('h1')
+                    lose.classList.remove("d-none")
+
+
                 } else {
-                    console.log('hola');
+                    /* console.log('hola'); */
                 }
-                /* return this */
+
             })
         }
 
