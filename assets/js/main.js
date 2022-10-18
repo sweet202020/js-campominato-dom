@@ -13,7 +13,7 @@ function randomBombsNumber(min, max) {
     }
     return bombsArray
   }
-randomBombsNumber(1, 16)
+randomBombsNumber(1, 100)
 
 
 /*  L'utente clicca su un bottone
