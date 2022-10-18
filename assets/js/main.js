@@ -47,18 +47,22 @@ randomBombsNumber(1, 100)
                 if (bombsArray.includes(Number(squareEl.innerText))){
                     /* console.log('ciao') */
                     squareEl.classList.remove('active')
-                    squareEl.classList.add('lose')
+                    squareEl.classList.add('lose') 
                     //seleziono l'h1 dalla dom
                     //rimuovo la classe d-none
                     const lose = document.querySelector('h1')
                     lose.classList.remove("d-none")
+                    /* this.addEventListener ('click', function(){
+                    squareEl.classList.remove('active')
+                    }) */
 
 
                 } else {
                     /* console.log('hola'); */
                 }
-
+                
             })
+            squareEl.classList.add('lose') 
         }
 
 
