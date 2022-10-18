@@ -13,7 +13,8 @@ function randomBombsNumber(min, max) {
     }
     return bombsArray
   }
-randomBombsNumber(1, 100)
+randomBombsNumber(1, 16)
+
 
 /*  L'utente clicca su un bottone
 
@@ -50,7 +51,7 @@ randomBombsNumber(1, 100)
                     squareEl.classList.add('lose') 
                     //seleziono l'h1 dalla dom
                     //rimuovo la classe d-none
-                    const lose = document.querySelector('h1')
+                    const lose = document.querySelector('h2.lose')
                     lose.classList.remove("d-none")
                     /* this.addEventListener ('click', function(){
                     squareEl.classList.remove('active')
@@ -63,6 +64,12 @@ randomBombsNumber(1, 100)
                     let counter = document.querySelectorAll(".active");
                     const counterEl= document.querySelector('.counter')
                     counterEl.innerHTML=('il tuo punteggio è: ' + counter.length)
+                    console.log(counter.length)
+                    if (counter.length===84) {
+                       console.log('hai vinto');
+                       const win = document.querySelector('h2.win')
+                       win.classList.remove('d-none') 
+                   } 
                 }
                 
             })
