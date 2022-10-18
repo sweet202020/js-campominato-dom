@@ -1,3 +1,19 @@
+let bombsArray=[]
+function randomBombsNumber(min, max) {
+    
+    while (bombsArray.length!==16){
+    const bomb = Math.floor(Math.random() * (max - min + 1) ) + min;
+    /* console.log(bomb) */
+    /* return bombsArray */
+    if (!bombsArray.includes(bomb)) {
+        bombsArray.push(bomb)
+        console.log(bombsArray) 
+        
+    }
+    }
+    return bombsArray
+  }
+randomBombsNumber(1, 100)
 
 /*  L'utente clicca su un bottone
 
@@ -26,13 +42,14 @@
             -con il this aggiungo la classe */
             
             squareEl.addEventListener('click', function active(){
-                this.classList.toggle('active')
-                console.log(this.innerText)
-                randomBombsNumber(1, 16)
-                if (bombsArray.includes(this)){
+                squareEl.classList.toggle('active')
+                console.log(squareEl.innerText)
+                if (bombsArray.includes(Number(squareEl.innerText))){
                     console.log('ciao')
+                } else {
+                    console.log('hola');
                 }
-                return this
+                /* return this */
             })
         }
 
@@ -55,21 +72,68 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
     -function
     -while
     -if */
-    let bombsArray=[]
-    function randomBombsNumber(min, max) {
-    
-    while (bombsArray.length!==16){
-    const bomb = Math.floor(Math.random() * (max - min + 1) ) + min;
-    /* console.log(bomb) */
-    /* return bombs */
-    if (!bombsArray.includes(bomb)) {
-        bombsArray.push(bomb)
-        console.log(bombsArray) 
-        
-    }
-    }
-    return bombsArray
-  }
   /* randomBombsNumber(1, 100) */
   
-/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ordine delle cose */
+  /* 16 numeri random da 1 a 100 per le bombe
+  event listener per il bottone che genera la griglia
+    -ciclo for da 1 a 100
+    -create element per la creazione del div
+    -className per aggiungere la classe
+    -innertext per aggiungere il numero progressivo
+  event listener per le celle che si colorano al click
+    - classList per aggiungere la classe active al click
+    - il click mi genera in console il numero cliccato
+    - devo confrontare il numero cliccato con i 16 numeri random generati prima dell'event listener
+    - se è presente lo stesso numero coloro di rosso la cella
+    - se non è presente la lascio stare come era prima
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
