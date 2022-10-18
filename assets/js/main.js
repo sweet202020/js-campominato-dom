@@ -54,15 +54,19 @@ randomBombsNumber(1, 100)
                     lose.classList.remove("d-none")
                     /* this.addEventListener ('click', function(){
                     squareEl.classList.remove('active')
-                    }) */
+                    }) 
+                    bombsArray.includes(Number(squareEl.innerText))*/
 
 
-                } else {
+                } else if (!bombsArray.includes(Number(squareEl.innerText))) {
                     /* console.log('hola'); */
+                    let counter = document.querySelectorAll(".active");
+                    const counterEl= document.querySelector('.counter')
+                    counterEl.innerHTML=('il tuo punteggio è: ' + counter.length)
                 }
                 
             })
-            squareEl.classList.add('lose') 
+            
         }
 
 
